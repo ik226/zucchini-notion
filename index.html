@@ -10,6 +10,19 @@
     <!-- End Google Tag Manager -->
   </head>
   <body>
+    <div>
+      <span id="parentUrl"></span>
+      <span id="customId"></span>
+    </div>
+    <script>
+      var url = (window.location != window.parent.location)
+            ? document.referrer
+            : document.location.href;
+      var params = new URLSearchParams(window.location.search);
+      var customId = params.get('customId');
+      document.getElementById('parentUrl').innerText = url;
+      document.getElementById('customId').innerText = customId;
+    </script>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHN38KW"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
