@@ -11,17 +11,12 @@
   </head>
   <body>
     <div>
-      <span id="parentUrl"></span>
-      <span id="customId"></span>
+      <span style="color: #fff" id="pageId"></span>
     </div>
     <script>
-      var url = (window.location != window.parent.location)
-            ? document.referrer
-            : document.location.href;
       var params = new URLSearchParams(window.location.search);
-      var customId = params.get('customId');
-      document.getElementById('parentUrl').innerText = url;
-      document.getElementById('customId').innerText = customId;
+      var pageId = params.get('pageId');
+      document.getElementById('pageId').innerText = pageId;
     </script>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHN38KW"
